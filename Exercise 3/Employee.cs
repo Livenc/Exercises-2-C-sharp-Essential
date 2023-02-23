@@ -8,51 +8,51 @@ namespace Exercise_3
 {
     internal class Employee
     {
-        string firstName, lastName, dolgnost;
-        double stag, salary, taxcaemploy;
+        string firstName, lastName, jobTitle;
+        double experience, salary, taxcaemploy;
         const double taxca = 0.2;
 
         public Employee(string FirstName, string LastName)
         {
             firstName = FirstName;
             lastName = LastName;
-            dolgnost = "";
+            jobTitle = "";
             salary = 0;
             taxcaemploy = 0;
 
         }
-        public void EmployeeSalary(string Dolgnost, double Stag)
+        public void EmployeeSalary(string JobTitle, double Experience)
         {
-            dolgnost = Dolgnost;
-            stag = Stag;
-            switch (Dolgnost)
+            jobTitle = JobTitle;
+            experience = Experience;
+            switch (JobTitle)
             {
-                case "Raochii":
+                case "Employee":
                     salary = 1200;
                     break;
-                case "Meneger":
+                case "Manager":
                     salary = 1900;
                     break;
-                case "Direktor":
+                case "Director":
                     salary = 2300;
                     break;
                 default:
                     salary = 0;
                     break;
             }
-            if (Stag <= 5)
+            if (Experience <= 5)
             {
                 salary = (salary * 0.2) + salary;
             }
-            else if (Stag > 5 && salary <= 10)
+            else if (Experience > 5 && salary <= 10)
             {
                 salary = (salary * 0.5) + salary;
             }
-            else if (Stag > 10 && salary <= 15)
+            else if (Experience > 10 && salary <= 15)
             {
                 salary = (salary * 0.7) + salary;
             }
-            else if (Stag > 15 && salary <= 100)
+            else if (Experience > 15 && salary <= 100)
             {
                 salary = (salary * 0.9) + salary;
             }
@@ -60,7 +60,7 @@ namespace Exercise_3
         }
         public void Show()
         {
-            Console.WriteLine($"Name: {firstName}  Last name : {lastName} Dolgnost :  {dolgnost} Salary :{salary} Taxs : {taxcaemploy}"  );
+            Console.WriteLine($"Name: {firstName}  Last name : {lastName} JobTitle :  {jobTitle} Salary :{salary} Taxs : {taxcaemploy}"  );
         }
     }
 

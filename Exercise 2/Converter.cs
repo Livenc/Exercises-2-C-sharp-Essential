@@ -9,39 +9,25 @@ namespace Exercise_2
 {
     internal class Converter
     {
-        double usd, eur, pln;
+        double usd, eur, pln, amount;
+        int choice;
         public Converter(double usd, double eur, double pln)
         {
             this.usd = usd;
             this.eur = eur;
             this.pln = pln;
         }
-        //void ConverterMoney(double first, double second)
-        //{
-        //    Console.WriteLine(first * second);
-        //}
-        public void Money(int chouse, int choese2 ,double amount)
+   
+  
+        public void UAHtoOtherCurrencies()
         {
-
-            //switch (chouse)
-            //{
-            //    case 1:
-            //        Console.WriteLine(amount / usd );
-            //        break;
-            //    case 2:
-            //        Console.WriteLine(amount / eur);
-            //        break;
-            //    case 3:
-            //        Console.WriteLine(amount / pln);
-            //        break;
-            //    default:
-            //        break;
-            //}
-        }
-        public void UAHtoOtherCurrencies(int choese,double amount)
-        {
-            
-            switch (choese)
+            Console.WriteLine("1 - uah to usd ");
+            Console.WriteLine("2 - uah to eur ");
+            Console.WriteLine("3 - uah to pln ");
+            choice= Convert.ToInt32(Console.ReadLine());
+            Console.Write("Input ammount : ");
+            amount = Convert.ToInt32(Console.ReadLine());
+            switch (choice)
             {
                 case 1:
                     Console.WriteLine($"{amount/usd}  usd");
@@ -54,14 +40,19 @@ namespace Exercise_2
                     Console.WriteLine($"{amount / pln}  pln");
                     break;
                 default:
-                    Console.WriteLine("Miss chouse");
+                    Console.WriteLine("Miss choice");
                     break;
             }
         }
-        public void toOtherCurrenciesToUAH(int choese, double amount)
+        public void toOtherCurrenciesToUAH()
         {
-
-            switch (choese)
+            Console.WriteLine("1 -  usd to uah");
+            Console.WriteLine("2 - eur to uah ");
+            Console.WriteLine("3 - pln to uah ");
+            choice = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Input ammount : ");
+            amount = Convert.ToInt32(Console.ReadLine());
+            switch (choice)
             {
                 case 1:
                     Console.WriteLine($"{amount * usd}  uah");
@@ -74,7 +65,7 @@ namespace Exercise_2
                     Console.WriteLine($"{amount * pln}  uah");
                     break;
                 default:
-                    Console.WriteLine("Miss chouse");
+                    Console.WriteLine("Miss choice");
                     break;
             }
         }

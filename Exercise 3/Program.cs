@@ -5,7 +5,7 @@
         static void Main(string[] args)
         {
             Employee employee = new Employee("Devid", "Grinch");
-            employee.EmployeeSalary("Direktor", 10);
+            employee.EmployeeSalary("Director", 10);
             employee.Show();
 
 
